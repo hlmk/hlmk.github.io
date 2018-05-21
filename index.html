@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="display: none;" >
+<html style="display: none;" lang="zh">
     <head>
     <meta charset="utf-8">
     <!--
@@ -43,7 +43,7 @@
     
     <title>
         
-        Hexo
+        Hlmk&#39;s Blog
     </title>
 
     <!-- Favicons -->
@@ -63,7 +63,7 @@
         <link rel="stylesheet" href="/css/ie-blocker.css">
 
         
-            <script src="/js/ie-blocker.en.js"></script>
+            <script src="/js/ie-blocker.zhCN.js"></script>
         
     <![endif]-->
 
@@ -212,11 +212,11 @@
 
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Hexo">
+    <meta name="application-name" content="Hlmk&#39;s Blog">
     <meta name="msapplication-starturl" content="http://yoursite.com/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Hexo">
+    <meta name="apple-mobile-web-app-title" content="Hlmk&#39;s Blog">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon" href="/img/favicon.ico">
 
@@ -230,7 +230,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hexo">
+    <meta property="og:title" content="Hlmk&#39;s Blog">
     <meta property="og:image" content="/img/favicon.ico">
     <meta property="og:description" content="">
     
@@ -254,7 +254,7 @@
     "@type": "Website",
     "publisher": {
         "@type": "Organization",
-        "name": "Hexo",
+        "name": "Hlmk&#39;s Blog",
         "logo": "/img/favicon.ico"
     },
     "url": "http://yoursite.com",
@@ -278,12 +278,21 @@
     <!-- Analytics -->
     
     
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?0c517b1c29118954f5fc8fca5be978ea';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
     
 
     <!-- Custom Head -->
     
 
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
 
 
     
@@ -339,23 +348,22 @@
 
     <!-- Search -->
     
-    <!-- Google -->
+
+
+
+
+    <!-- Local -->
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
         <label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
             <i class="material-icons mdl-color-text--white" role="presentation">search</i>
         </label>
 
-        <form autocomplete="off" id="search-form" method="get" action="//google.com/search" accept-charset="UTF-8" class="mdl-textfield__expandable-holder" target="_blank">
-            <input class="mdl-textfield__input search-input" type="search" name="q" id="search" placeholder="">
+        <form autocomplete="off" id="search-form" class="mdl-textfield__expandable-holder">
+            <input type="text" id="search" class="form-control mdl-textfield__input search-input" name="q" results="0" placeholder=""/>
             <label id="search-form-label" class="mdl-textfield__label" for="search"></label>
-
-            <input type="hidden" name="sitesearch" value="http://yoursite.com">
         </form>
     </div>
-
-
-
-
+    <div id="local-search-result"></div>
 
 
 
@@ -370,7 +378,7 @@
     <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
         <!-- Blog Title -->
         <div>
-            <strong>Hexo</strong>
+            <strong>Hlmk&#39;s Blog</strong>
         </div>
         <div class="section-spacer"></div>
 
@@ -380,6 +388,12 @@
             <span class="visuallyhidden">Pages</span>
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
+            
+                <a class="index_share-link" href="/about" title="Java">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        Java
+                    </li>
+                </a>
             
         </ul>
 
@@ -394,17 +408,17 @@
             
 
             
-                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hexo&url=http://yoursite.com&pic=http://yoursite.com/img/favicon.ico&searchPic=false&style=simple" target="_blank">
+                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hlmk&#39;s Blog&url=http://yoursite.com&pic=http://yoursite.com/img/favicon.ico&searchPic=false&style=simple" target="_blank">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        Share to Weibo
+                        分享到微博
                     </li>
                 </a>
             
 
             
-                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=Hexo&url=http://yoursite.com&via=John Doe" target="_blank">
+                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=Hlmk&#39;s Blog&url=http://yoursite.com&via=John Doe" target="_blank">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        Share to Twitter
+                        分享到 Twitter
                     </li>
                 </a>
             
@@ -412,7 +426,7 @@
             
                 <a class="index_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com" target="_blank">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        Share to Facebook
+                        分享到 Facebook
                     </li>
                 </a>
             
@@ -420,7 +434,7 @@
             
                 <a class="index_share-link" href="https://plus.google.com/share?url=http://yoursite.com" target="_blank">
                     <li class="mdl-menu__item mdl-js-ripple-effect">
-                        Share to Google+
+                        分享到 Google+
                     </li>
                 </a>
             
@@ -439,13 +453,11 @@
 
     <!-- Pin on top -->
     
-
-    <!-- Normal Post -->
-    
         
             
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+                
+                    <!-- Paradox Thumbnail -->
+                    <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
     <!-- Post Thumbnail -->
     
         
@@ -455,17 +467,18 @@
     
 
         <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/05/21/test/">test</a></p>
+        <p class="article-headline-p"><a href="/2018/05/21/test/"><span>[Top]</span>搭建github个人博客</a></p>
     </div>
 
     <!-- Post Excerpt -->
     <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
         
-            
+            内容测试
+
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/2018/05/21/test/" target="_self">Read more</a>
+            <a href="/2018/05/21/test/" target="_self">阅读全文</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -477,7 +490,7 @@
             </div>
             <div>
                 <strong>John Doe</strong>
-                <span>May 21, 2018</span>
+                <span>5月 21, 2018</span>
             </div>
         </div>
         <div id="post_entry-right-info">
@@ -494,8 +507,14 @@
     </div>
 </div>
 
+                
+                
             
-            
+        
+    
+
+    <!-- Normal Post -->
+    
         
     
         
@@ -521,7 +540,7 @@
         
         &nbsp;&nbsp;&nbsp;
         <span>
-            <a href="/2018/05/21/hello-world/" target="_self">Read more</a>
+            <a href="/2018/05/21/hello-world/" target="_self">阅读全文</a>
         </span>
     </div>
     <!-- Post_entry Info-->
@@ -533,7 +552,7 @@
             </div>
             <div>
                 <strong>John Doe</strong>
-                <span>May 21, 2018</span>
+                <span>5月 21, 2018</span>
             </div>
         </div>
         <div id="post_entry-right-info">
@@ -618,7 +637,7 @@
         <ul id="settings-dropdown" class="dropdown-menu">
             
                 <li>
-                    <a href="#" target="_blank" title="Email Me">
+                    <a href="mailto: link.cht@qq.com" target="_blank" title="Email Me">
                         
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
                         
@@ -636,7 +655,7 @@
                 
                     <i class="material-icons sidebar-material-icons">home</i>
                 
-                Home
+                主页
             </a>
         </li>
         
@@ -649,12 +668,12 @@
                 
                     <i class="material-icons sidebar-material-icons">inbox</i>
                 
-                    Archives
+                    归档
                 <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2018/05/">May 2018<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2018/05/">五月 2018<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -665,8 +684,26 @@
 
     <!-- Pages  -->
     
+        <li>
+            <a href="/about" title="Java">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                Java
+            </a>
+        </li>
+        
+    
 
     <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">2</span>
+            </a>
+        </li>
+        
     
 </ul>
 
@@ -691,7 +728,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
     <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
         <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            Theme - Material
+            主题 - Material
             <span class="sidebar-badge badge-circle">i</span>
         </div>
     </a>
@@ -800,7 +837,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
         <!--Copyright-->
         <div id="copyright">
-            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Hexo
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>Hlmk's Blog
             
         </div>
 
@@ -866,6 +903,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//https-hlmk-github-io.disqus.com/count.js" async></script>
+
 
 
 
@@ -873,6 +913,25 @@ It will not impact the appearance and can give developers a lot of support :)
     
 
     <!-- Local Search-->
+    
+        <script type="text/ls-javascript" id="search-local-js-script">
+    var searchFunc=function(c,a,b){$.ajax({url:c,dataType:"xml",success:function(e){var d=$("entry",e).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get();var g=document.getElementById(a);var f=document.getElementById(b);g.addEventListener("input",function(){var i='<ul class="search-result-list">';var h=this.value.trim().toLowerCase().split(/[\s\-]+/);f.innerHTML="";if(this.value.trim().length<=0){return}d.forEach(function(o){var n=true;var s=[];var t=o.title.trim().toLowerCase();var m=o.content.trim().replace(/<[^>]+>/g,"").toLowerCase();var j=o.url;var u=-1;var q=-1;var p=-1;if(t!==""&&m!==""){h.forEach(function(w,x){u=t.indexOf(w);q=m.indexOf(w);if(u<0&&q<0){n=false}else{if(q<0){q=0}if(x===0){p=q}}})}if(n){i+='<li><a href="'+j+'" class="search-result-title" target="_blank">'+t;var r=o.content.trim().replace(/<[^>]+>/g,"");if(p>=0){var k=p-6;var l=p+6;if(k<0){k=0}if(k===0){l=10}if(l>r.length){l=r.length}var v=r.substr(k,l);h.forEach(function(w){var x=new RegExp(w,"gi");v=v.replace(x,'<em class="search-keyword">'+w+"</em>")});i+='<p class="search-result">'+v+"...</p></a>"}}});f.innerHTML=i})}})};
+</script>
+
+
+        <script type="text/ls-javascript" id="search-input-script">
+            var inputArea = document.querySelector('#search');
+            var getSearchFile = function() {
+                var path = 'search.xml';
+                searchFunc(path, 'search', 'local-search-result');
+            }
+
+            if(inputArea) {
+                inputArea.onfocus = function() {
+                    getSearchFile();
+                }
+            }
+        </script>
     
 
 
