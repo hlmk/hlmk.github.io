@@ -43,7 +43,7 @@
     
     <title>
         
-            Hello World | 
+            spring+redis实现redissession共享 | 
         
         Hlmk&#39;s Blog
     </title>
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hlmk&#39;s Blog">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/21/hello-world/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2018/05/27/spring+redis实现redissession共享/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Hlmk&#39;s Blog">
@@ -230,16 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2018/05/21/hello-world/">
+    <meta property="og:url" content="http://yoursite.com/2018/05/27/spring+redis实现redissession共享/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Hello World | Hlmk&#39;s Blog">
+    <meta property="og:title" content="spring+redis实现redissession共享 | Hlmk&#39;s Blog">
     <meta property="og:image" content="/img/favicon.ico">
     <meta property="og:description" content="">
     
 
     
-        <meta property="article:published_time" content="Mon May 21 2018 16:39:47 GMT+0800">
-        <meta property="article:modified_time" content="Mon May 21 2018 16:39:47 GMT+0800">
+        <meta property="article:published_time" content="Sun May 27 2018 08:43:20 GMT+0800">
+        <meta property="article:modified_time" content="Sun May 27 2018 11:02:14 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -247,7 +247,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2018/05/21/hello-world/index.html" />
+        <link rel="canonical" href="http://yoursite.com/2018/05/27/spring+redis实现redissession共享/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -259,10 +259,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2018/05/21/hello-world/index.html",
-    "headline": "Hello World",
-    "datePublished": "Mon May 21 2018 16:39:47 GMT+0800",
-    "dateModified": "Mon May 21 2018 16:39:47 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2018/05/27/spring+redis实现redissession共享/index.html",
+    "headline": "spring+redis实现redissession共享",
+    "datePublished": "Sun May 27 2018 08:43:20 GMT+0800",
+    "dateModified": "Sun May 27 2018 11:02:14 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "hlmk",
@@ -355,7 +355,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#添加依赖"><span class="post-toc-number">1.</span> <span class="post-toc-text">添加依赖</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#xml配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">xml配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置SpringMVC"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">配置SpringMVC</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#web-xml添加拦截器"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">web.xml添加拦截器</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#使用spring-session"><span class="post-toc-number">3.</span> <span class="post-toc-text">使用spring-session</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#测试"><span class="post-toc-number">4.</span> <span class="post-toc-text">测试</span></a></li></ol>
     </ul>
     
 
@@ -387,7 +387,7 @@
         
     
             <p class="article-headline-p">
-                Hello World
+                spring+redis实现redissession共享
             </p>
         </div>
 
@@ -406,7 +406,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>hlmk</strong>
-        <span>5月 21, 2018</span>
+        <span>5月 27, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -428,7 +428,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACXklEQVR42u3a0W7CMAwFUP7/p7fXSQi4tps0Q6dPCEbJ6aTEuvbj56uvBx4eHh4eHh4e3mG8R3z9/fvn18/3fPXOq0/fv5+sDQ8PD28n78NW+7S4OaD6KJO14eHh4e3nVX8m38qrS5ysDQ8PD+803mTR7xn57+Lh4eH9L16yrKSYzst3PDw8vJN5vS3+/Q/noW0eEy/MWvDw8PBi3rwBtu71Ef09PDw8vMGVB7VXhbnlFeLh4eEt5r0vgj9swcG4QHWYoFfK4+Hh4e3n5VHC5JDoFdPlh4KHh4e3mNfbgqtjWNVG2igmxsPDw1vMq27o6wru3jEQhRF4eHh4l/LyrTmPaK+NGMqjYHh4eHiLeYWW/DJwL97Fw8PDu5c3GReYD5j2ouHy6AAeHh7epbxe2Jo3tOZFfKEth4eHh7eYNwH0iuY8us0jYzw8PLz9vN6i8/i1NzpQvT8eHh7eObwVLateMV2OcfHw8PCW8fL4YB7LTu6QfBcPDw9vNa8XQCTb/TyQTY4TPDw8vLt4UUs+CF6rgWy1vI7ewcPDw1vMy+PUfByqOnLaG0coxLh4eHh4C3i9wdB8ufnm3ivQ8fDw8Hby5kMD+RKr7bT8W3h4eHg7eZMDoNnaLz64cuyLh4eHt5hXDR3mw1WTIa3oH4CHh4e3hVdt3vcihhxZHSDAw8PDu4uXt/AL7ajikXPBg8DDw8M7jJcX3FeFF+WhBDw8PLyDeUlJ3Vt69YjCw8PDu4uXhBFXFdYJrHrA4OHh4e3k9RpgeUFcHSPo3Q0PDw9vD+/7Ljw8PDw8PDw8vAOuX1SXShWeh2JHAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3UlEQVR42u3aQW4jMQwEQP//07vXBYLY3aQ3cKTSyRhMxiwNEJqkHn+uXA9sbGxsbGxsbGzsj2Q/4vXv/V8/f/fMr9e/u/LddyXXn8eMjY2NfQP7xb/+Mtzn9yQhPo9hGDM2Njb2BewkaSVblqeuBPCcnceMjY2Njf3ebXoRYlkOYWNjY2Pv2bOSI+G1RQ42Njb2zey8DEgGA/k9m63/oV4aNjY29sez94Pen//8EfNtbGxs7A9gtytv6LeHePYjhBcxYGNjYx/Kzlv5eZOoLSo2BUxx0BMbGxv7AnZ7FDL5svzJswOaxZ3Y2NjYF7DzIiFqx8eHePYlShQhNjY29qHsd7WB2uM4+dg4SbTRFmNjY2Mfyt6UB23KeVeazBtV2NjY2Dew23TSJpU8ge2fMCxFsLGxsQ9ltz/028b9Y7TaUTQ2Njb2bey8lZNj8lbUbAyQvxJsbGzsU9mbgJLkN2tRvSsdYmNjY9/AniWnNuW0hy/3WxnlbWxsbOyD2PkWtKlrMwCebdaqAsPGxsY+iD3bjvxoTp4g84HEi/ixsbGxL2DPBgOzttR+bNw+DRsbG/tU9r5tlA8M8mM3sycUpQg2Njb2QexZIylPcrMGUzvQjV4YNjY29tHsvNG/SWntUDn/XmxsbGzsTROnLWaSFJWXK0URhY2NjX0oOx+7vuuvZg2sNn1GvTRsbGzsI9htUbEZ7kbBjdLhcDyAjY2NfSg7Twxtu+d/DAyKcgUbGxv7UPZmoJtsX95+mg2Si7EENjY29qHs+gd93E5qi5Z2cNu+EmxsbOxT2Y94bdjD0Wy5ZaupCDY2NvYvZ+ct+01YbTmxOfqDjY2NfSc7KQNmjf62tZSkw3YMjI2NjY2djHhXpUJJrY9yYmNjY2PHJcq+jGkT1aqphI2NjX0Quw29bfS/l1e/JGxsbOyj2e2P/naUmwwSZhv6XIGNjY19A/uehY2NjY2NjY2Njf0x6y9NQ5rdGteNHwAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -450,7 +450,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hello World&url=http://yoursite.com/2018/05/21/hello-world/index.html&pic=http://yoursite.com/img/favicon.ico&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=spring+redis实现redissession共享&url=http://yoursite.com/2018/05/27/spring+redis实现redissession共享/index.html&pic=http://yoursite.com/img/favicon.ico&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -459,7 +459,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hello World&url=http://yoursite.com/2018/05/21/hello-world/index.html&via=hlmk" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=spring+redis实现redissession共享&url=http://yoursite.com/2018/05/27/spring+redis实现redissession共享/index.html&via=hlmk" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -468,7 +468,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/21/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/05/27/spring+redis实现redissession共享/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -477,7 +477,7 @@
 
     <!-- Share Google+ -->
     
-        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/21/hello-world/index.html" target="_blank">
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/2018/05/27/spring+redis实现redissession共享/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Google+
             </li>
@@ -502,15 +502,20 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.session<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-session-data-redis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.1.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="xml配置"><a href="#xml配置" class="headerlink" title="xml配置"></a>xml配置</h1><h2 id="配置SpringMVC"><a href="#配置SpringMVC" class="headerlink" title="配置SpringMVC"></a>配置SpringMVC</h2><p>spring-mvc.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">&lt;!--将session放入redis--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"redisHttpSessionConfiguration"</span> <span class="attr">class</span>=<span class="string">"org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--初始化cookie信息--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"cookieSerializer"</span> <span class="attr">ref</span>=<span class="string">"cookieSerializer"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--session过期时间--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxInactiveIntervalInSeconds"</span> <span class="attr">value</span>=<span class="string">"600"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--定义cookie session名称--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"cookieSerializer"</span>   <span class="attr">class</span>=<span class="string">"org.springframework.session.web.http.DefaultCookieSerializer"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"cookieName"</span> <span class="attr">value</span>=<span class="string">"SESSION"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--配置redis连接池--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"jedisPoolConfig"</span> <span class="attr">class</span>=<span class="string">"redis.clients.jedis.JedisPoolConfig"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--允许开启的最大连接数--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxTotal"</span> <span class="attr">value</span>=<span class="string">"100"</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--最大空闲连接数--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxIdle"</span> <span class="attr">value</span>=<span class="string">"10"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--jedis连接工厂配置</span></span><br><span class="line"><span class="comment">    destroy-method : 容器销毁之前执行的方法</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"jedisConnectionFactory"</span> <span class="attr">class</span>=<span class="string">"org.springframework.data.redis.connection.jedis.JedisConnectionFactory"</span> <span class="attr">destroy-method</span>=<span class="string">"destroy"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hostName"</span> <span class="attr">value</span>=<span class="string">"$&#123;redis.host&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"port"</span> <span class="attr">value</span>=<span class="string">"$&#123;redis.port&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;redis.pass&#125;"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"timeout"</span> <span class="attr">value</span>=<span class="string">"3000"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"usePool"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"poolConfig"</span> <span class="attr">ref</span>=<span class="string">"jedisPoolConfig"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="web-xml添加拦截器"><a href="#web-xml添加拦截器" class="headerlink" title="web.xml添加拦截器"></a>web.xml添加拦截器</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--添加redis session拦截器--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>springSessionRepositoryFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.springframework.web.filter.DelegatingFilterProxy<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>springSessionRepositoryFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h1 id="使用spring-session"><a href="#使用spring-session" class="headerlink" title="使用spring-session"></a>使用spring-session</h1><p>只要使用标准的servlet api调用session，在底层就会通过Spring Session得到的，并且会存储到Redis或其他你所选择的数据源中。</p>
+<p>这里是我写的一个demo:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisSession</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Gson gson = <span class="keyword">new</span> GsonBuilder().setDateFormat(<span class="string">"yyyyMMddHHmmss"</span>).create();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/login"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">login</span><span class="params">(HttpServletRequest request, String username)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        request.getSession().setAttribute(<span class="string">"user"</span>, gson.toJson(<span class="keyword">new</span> User(username,<span class="string">"123456"</span>)));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"login"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/index"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">index</span><span class="params">(HttpServletRequest request, Model model)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        User user = gson.fromJson(request.getSession().getAttribute(<span class="string">"user"</span>).toString(), User.class);</span><br><span class="line"></span><br><span class="line">        model.addAttribute(<span class="string">"user"</span>, user);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"index"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p><strong>首先访问 <code>http://localhost:8080/login?username=%E5%BC%A0%E4%B8%89</code> 来触发生成session。</strong><br><img src="/images/redisSession/1527389828788.jpg" alt="enter description here" title="1527389828788.jpg"></p>
+<p><strong>查看redis，发现session已经保存到redis。</strong><br><img src="/images/redisSession/1527389317833.jpg" alt="enter description here" title="1527389317833.jpg"></p>
+<p><strong>访问 <code>http://localhost:8080/index</code> 获取redis中sessiion信息</strong><br><img src="/images/redisSession/1527389648332.jpg" alt="enter description here" title="1527389648332.jpg"></p>
+<p><strong>访问第二个启动实例 <code>http://localhost:8081/index</code> 回去redis中session信息</strong><br><img src="/images/redisSession/1527389695362.jpg" alt="enter description here" title="1527389695362.jpg"></p>
+<p><strong>至此发现两个启动实例中，都可以访问到redis中的session信息，说明，测试成功。</strong></p>
+<hr>
+<p>项目地址：<a href="https://github.com/hlmk/project/tree/master/studyProject/spring_redis_session" target="_blank" rel="noopener">https://github.com/hlmk/project/tree/master/studyProject/spring_redis_session</a></p>
+<p>可以在浏览器装 Octotree 插件更好的浏览github代码<br><img src="/images/redisSession/1527383267873.jpg" alt="enter description here" title="1527383267873.jpg"><br>效果如下图<br><img src="/images/redisSession/1527383323053.jpg" alt="enter description here" title="1527383323053.jpg"></p>
+<p>参考博客：<a href="https://www.cnblogs.com/andyfengzp/p/6434287.html" target="_blank" rel="noopener">https://www.cnblogs.com/andyfengzp/p/6434287.html</a></p>
 
         
     
@@ -529,8 +534,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2018/05/21/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2018/05/21/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2018/05/27/spring+redis实现redissession共享/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/05/27/spring+redis实现redissession共享/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -560,19 +565,19 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2018/05/21/搭建github个人博客/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/05/23/SpringBoot2面试题整理/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
