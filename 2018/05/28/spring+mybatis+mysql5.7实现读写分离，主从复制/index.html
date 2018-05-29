@@ -244,7 +244,7 @@
 
     
         <meta property="article:published_time" content="Mon May 28 2018 18:18:20 GMT+0800">
-        <meta property="article:modified_time" content="Tue May 29 2018 22:48:17 GMT+0800">
+        <meta property="article:modified_time" content="Tue May 29 2018 22:55:19 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -267,7 +267,7 @@
     "mainEntityOfPage": "https://hlmk.github.com/2018/05/28/spring+mybatis+mysql5.7实现读写分离，主从复制/index.html",
     "headline": "spring+mybatis+mysql5.7实现读写分离，主从复制",
     "datePublished": "Mon May 28 2018 18:18:20 GMT+0800",
-    "dateModified": "Tue May 29 2018 22:48:17 GMT+0800",
+    "dateModified": "Tue May 29 2018 22:55:19 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "hlmk",
@@ -513,7 +513,7 @@
 <p>所用软件版本列表：<br>MySQL 5.7<br>spring5<br>mybaties3.4.6</p>
 <hr>
 <p>首先搭建一个完整的spring5+springMVC5+Mybatis3.4的完整框架，如果嫌麻烦，可以直接去我github上下载完整测试代码，代码地址 <a href="https://github.com/hlmk/project/tree/master/studyProject/read_and_write_separate" target="_blank" rel="noopener">https://github.com/hlmk/project/tree/master/studyProject/read_and_write_separate</a></p>
-<h1 id="数据库读写分离简介"><a href="#数据库读写分离简介" class="headerlink" title="数据库读写分离简介"></a>数据库读写分离简介</h1><p>Mysql中，当数据和并发量到达一定的级别时，单库的处理能力显得力不从心，TPS/OPS 越来越低，因此到了这个阶段，DBA会将数据库设置为读写分离状态（生产环境一般会采用一主一从或者一主多从），由Master负责写操作，而Slave作为备库，不会开放写操作，但可以允许读操作，主从之间保持数据同步即可。根据二八法则，80%的数据库操作是读操作，剩下的20%是写操作，读写分离后，可以大大提升单库无法支撑的负载压力，如图5-1所示。在此需要注意，如果Master存在TPS较高的情况，Master与Slave数据库之间数据同步是会存在一定延迟的，因此在写入Master之前最好将同一份数据落到缓存中，以避免高并发的情况下，从Slave中获取不到指定数据的情况。<br><img src="/readWriteSeparate/images/1527504083104.jpg" alt="enter description here" title="1527504083104.jpg"></p>
+<h1 id="数据库读写分离简介"><a href="#数据库读写分离简介" class="headerlink" title="数据库读写分离简介"></a>数据库读写分离简介</h1><p>Mysql中，当数据和并发量到达一定的级别时，单库的处理能力显得力不从心，TPS/OPS 越来越低，因此到了这个阶段，DBA会将数据库设置为读写分离状态（生产环境一般会采用一主一从或者一主多从），由Master负责写操作，而Slave作为备库，不会开放写操作，但可以允许读操作，主从之间保持数据同步即可。根据二八法则，80%的数据库操作是读操作，剩下的20%是写操作，读写分离后，可以大大提升单库无法支撑的负载压力，如图5-1所示。在此需要注意，如果Master存在TPS较高的情况，Master与Slave数据库之间数据同步是会存在一定延迟的，因此在写入Master之前最好将同一份数据落到缓存中，以避免高并发的情况下，从Slave中获取不到指定数据的情况。<br><img src="/images/readWriteSeparate/1527504083104.jpg" alt="enter description here" title="1527504083104.jpg"></p>
 <h1 id="mybatis配置读写分离"><a href="#mybatis配置读写分离" class="headerlink" title="mybatis配置读写分离"></a>mybatis配置读写分离</h1><p>配置文件主要是修改Mybatis相关的配置文件即可，原理就是通过springAOP切面和Mybatis插件结合，为service层调用的dao层根据方法名来选择是读数据库还是写数据库，具体配置如下：<br>Mybatis.xml配置</p>
 <p>写数据源配置</p>
 <pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>writeDataSource<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.alibaba.druid.pool.DruidDataSource<span class="token punctuation">"</span></span> <span class="token attr-name">init-method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>init<span class="token punctuation">"</span></span> <span class="token attr-name">destroy-method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>close<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -704,15 +704,15 @@
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h1><h2 id="主数据库配置"><a href="#主数据库配置" class="headerlink" title="主数据库配置"></a>主数据库配置</h2><p><strong>注意：务必保持主从数据库是同一个版本的数据库，否则容易出现兼容问题。</strong><br>从数据库，一般用于存储，具体配置步骤如下：<br>1.找到my.ini目录所在位置，默认如下：<br><img src="/readWriteSeparate/images/1527602818775.jpg" alt="enter description here" title="1527602818775.jpg"></p>
+<h1 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h1><h2 id="主数据库配置"><a href="#主数据库配置" class="headerlink" title="主数据库配置"></a>主数据库配置</h2><p><strong>注意：务必保持主从数据库是同一个版本的数据库，否则容易出现兼容问题。</strong><br>从数据库，一般用于存储，具体配置步骤如下：<br>1.找到my.ini目录所在位置，默认如下：<br><img src="/images/readWriteSeparate/1527602818775.jpg" alt="enter description here" title="1527602818775.jpg"></p>
 <p>2.修改对应的配置。</p>
 <pre><code>//server-id 必须保证唯一，不能重复。
 server-id=1
 //指定二进制日志文件的存储路径和名称
 log-bin=mysql-bin
 </code></pre><p>重启mysql主服务</p>
-<p>查看主服务器master信息 <code>show master status</code><br><img src="/readWriteSeparate/images/1527603433502.jpg" alt="enter description here" title="1527603433502.jpg"></p>
-<h2 id="从服务器配置"><a href="#从服务器配置" class="headerlink" title="从服务器配置"></a>从服务器配置</h2><p>1.找到my.ini目录所在位置，默认如下：<br><img src="/readWriteSeparate/images/1527602818775.jpg" alt="enter description here" title="1527602818775.jpg"><br>2.修改从服务器配置，如下：</p>
+<p>查看主服务器master信息 <code>show master status</code><br><img src="/images/readWriteSeparate/1527603433502.jpg" alt="enter description here" title="1527603433502.jpg"></p>
+<h2 id="从服务器配置"><a href="#从服务器配置" class="headerlink" title="从服务器配置"></a>从服务器配置</h2><p>1.找到my.ini目录所在位置，默认如下：<br><img src="/images/readWriteSeparate/1527602818775.jpg" alt="enter description here" title="1527602818775.jpg"><br>2.修改从服务器配置，如下：</p>
 <pre><code>server-id=2
 log-bin=mysql-bin
 relay_log=mysql-relay-bin
@@ -727,7 +727,7 @@ master_log_file<span class="token operator">=</span><span class="token string">'
 master_log_pos<span class="token operator">=</span><span class="token string">'154'</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">--指定要同步的节点，和show master status 中的 position值保持一致</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>6.启动从服务器配置 <code>start slave;</code></p>
-<p>7.<code>show slave status\G;</code> 查看从服务状态<br><img src="/readWriteSeparate/images/1527604404149.jpg" alt="enter description here" title="1527604404149.jpg"><br>图上标志的两个都为yes时，则标示配置成功</p>
+<p>7.<code>show slave status\G;</code> 查看从服务状态<br><img src="/images/readWriteSeparate/1527604404149.jpg" alt="enter description here" title="1527604404149.jpg"><br>图上标志的两个都为yes时，则标示配置成功</p>
 <h1 id="测试是否同步"><a href="#测试是否同步" class="headerlink" title="测试是否同步"></a>测试是否同步</h1><p>修改主服务器的数据，会发现数据同步到从服务器中，我这里是测试成功的，具体的就不截图了，如果没同步成功，那么请检查是否主从服务器版本是否为同一个版本，然后在检查配置是否写错，主从同步延时那个就参考其他资料了，这就先介绍到这里。</p>
 <p>参考博客：<a href="https://blog.csdn.net/juded/article/details/54600294" target="_blank" rel="noopener">https://blog.csdn.net/juded/article/details/54600294</a></p>
 
